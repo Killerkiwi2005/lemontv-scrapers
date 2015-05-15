@@ -18,7 +18,7 @@ Example JSON data array
 				"uri" : "http://urlofvideofile",
 				"s" : 0, 
 				"e" : 0, 
-				"price" : 2.00, // Optional price in NZ dollars can be
+				"price" : 2.00, // Optional price in NZ dollars
 			}
 		]
 	}
@@ -28,4 +28,4 @@ The util module can be used to return data in a queryable format
 - util.get_url_json(url), returns a json python object 
 - util.get_url_html(url), returns an lxml html document that can be queried using xpath
 
-We will a accept a pull request for scrapper for any *legal NZ site*, foreign *legal* sites may be accepted
+We will accept a pull request for scrapper for any **legal NZ site**, foreign **legal** sites may be accepted
