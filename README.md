@@ -25,5 +25,7 @@ Example JSON data array
 ]
 ```
 The util module can be used to return data in a queryable format
-util.get_url_json(url), returns a json python object 
-util.get_url_html(url), returns an lxml html document that can be queried using xpath
+- util.get_url_json(url), returns a json python object 
+- util.get_url_html(url), returns an lxml html document that can be queried using xpath
+
+We will a accept a pull request for scrapper for any *legal NZ site*, foreign *legal* sites may be accepted
