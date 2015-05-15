@@ -5,6 +5,7 @@ Python scrappers for NZ streaming websites http://www.lemontv.co.nz
 The scripts all have a function get_listings() that returns a json array
 
 Example JSON data array
+```
 [
 	{
 		title : "Breaking Bad", // Title of the tv series/movie
@@ -22,7 +23,7 @@ Example JSON data array
 		]
 	}
 ]
-
+```
 The util module can be used to return data in a queryable format
 util.get_url_json(url), returns a json python object 
 util.get_url_html(url), returns an lxml html document that can be queried using xpath
