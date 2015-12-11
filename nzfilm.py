@@ -25,7 +25,10 @@ def get_movie(slug):
 	# lowest price
 	price = ""
 	if price_data["prices"]:
-		price = price_data["prices"][0]["rent"]["hd"]
+		if price_data["prices"][0]["rent"]["hd"]:
+			price = price_data["prices"][0]["rent"]["hd"]
+		else:
+			price = price_data["prices"][0]["buy"]["hd"]
 
 	# every show has an episode even movies
 	show["episodes"] = [{"show" : data["title"], "uri" : URI_TEMPLATE.format(slug, urllib.parse.quote_plus(data["title"])), "s" : 0, "e" : 0, "price" : price}]
@@ -56,6 +59,7 @@ def get_tv(slug):
 			episode["uri"] = URI_TEMPLATE.format(slug, urllib.parse.quote_plus(data["show_info"]["title"]))
 			episode["s"] = data["season_num"]
 			episode["e"] = e["episode_number"]
+			episode["price"] = price
 			show["episodes"].append(episode)
 
 	return show
